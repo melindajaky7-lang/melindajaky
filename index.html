@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portofolio Yos Melinda Jaky</title>
+
+    <style>
+
+/* =====================================
+   TAMBAHAN CSS PORTOFOLIO YOS MELINDA JAKY
+   DESAIN MODERN DAN ELEGAN
+===================================== */
+
+/* Pengaturan dasar */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #eef5ff, #ffffff, #e3efff);
+    color: #26354d;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Efek saat teks diblok */
+::selection {
+    background: #2563eb;
+    color: white;
+}
+
+/* Navbar */
+nav {
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(15, 40, 90, 0.15);
+}
+
+nav a {
+    transition: 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    color: #60a5fa;
+    transform: translateY(-3px);
+}
+
+/* Judul setiap bagian */
+.section h2 {
+    color: #12356b;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: linear-gradient(to right, #1d4ed8, #60a5fa);
+    border-radius: 10px;
+    margin: 12px auto 0;
+}
+
+/* Foto profil */
+.hero img {
+    border: 6px solid white;
+    box-shadow: 0 12px 35px rgba(29, 78, 216, 0.25);
+    transition: 0.5s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.06) rotate(2deg);
+    box-shadow: 0 18px 40px rgba(29, 78, 216, 0.35);
+}
+
+/* Kartu biodata */
+.biodata {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #dbeafe;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.10);
+    transition: 0.4s ease;
+}
+
+.biodata:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(30, 64, 175, 0.18);
+}
+
+/* Baris informasi biodata */
+.biodata p {
+    padding: 12px 15px;
+    margin: 8px 0;
+    background: #f1f6ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.biodata p:hover {
+    background: #dbeafe;
+    padding-left: 22px;
+}
+
+/* Riwayat pendidikan */
+#pendidikan .education,
+#pendidikan .education-item {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.10);
+    transition: 0.3s ease;
+}
+
+#pendidikan .education:hover,
+#pendidikan .education-item:hover {
+    transform: translateX(7px);
+    box-shadow: 0 10px 25px rgba(30, 64, 175, 0.18);
+}
+
+/* Keahlian */
+#keahlian li {
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    margin: 8px;
+    display: inline-block;
+    box-shadow: 0 5px 12px rgba(37, 99, 235, 0.20);
+    transition: 0.3s ease;
+}
+
+#keahlian li:hover {
+    transform: translateY(-5px) scale(1.04);
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+}
+
+/* Proyek dan hasil karya */
+#proyek .project,
+#proyek .card {
+    background: white;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.10);
+    transition: 0.4s ease;
+}
+
+#proyek .project:hover,
+#proyek .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(30, 64, 175, 0.18);
+}
+
+/* Tombol */
+button,
+.btn,
+a.button {
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover,
+.btn:hover,
+a.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.30);
+}
+
+/* Kontak */
+#kontak {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+#kontak a {
+    color: #1d4ed8;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+#kontak a:hover {
+    color: #0f172a;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #0f172a, #1e40af);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Animasi muncul */
+.section {
+    animation: muncul 0.8s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efek fokus untuk aksesibilitas */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 4px;
+}
+
+/* Tampilan HP */
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 20px 15px;
+    }
+
+    .biodata {
+        padding: 18px;
+    }
+
+    .hero img {
+        max-width: 180px;
+    }
+
+    #kontak {
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+}
+
+/* Mengurangi animasi jika pengguna mengaturnya */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #eef2f6;
+            color: #334155;
+            line-height: 1.7;
+        }
+
+        /* MENU NAVIGASI */
+        header {
+            background: #0f4c81;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        /* BERANDA */
+        .hero {
+            min-height: 400px;
+            background: linear-gradient(135deg, #0f4c81, #2563eb);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .tombol {
+            display: inline-block;
+            margin-top: 20px;
+            background: white;
+            color: #0f4c81;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .tombol:hover {
+            background: #dbeafe;
+        }
+
+        /* KONTEN */
+        .container {
+            max-width: 950px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .section h2 {
+            color: #0f4c81;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #dbeafe;
+            padding-bottom: 10px;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+        }
+
+        /* BIODATA */
+        .biodata p {
+            padding: 9px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .biodata strong {
+            color: #0f4c81;
+        }
+
+        /* PENDIDIKAN */
+        .education {
+            background: #f1f7ff;
+            padding: 18px;
+            border-left: 4px solid #2563eb;
+            border-radius: 8px;
+        }
+	.education-desc {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px;
+    background-color: #f4f8ff;
+    border-left: 5px solid #2563eb;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.education-item:hover {
+    transform: translateX(5px);
+    background-color: #e8f0ff;
+}
+
+.education-icon {
+    font-size: 30px;
+    background-color: #dbeafe;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.education-info h3 {
+    color: #174ea6;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.education-info p {
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.education-info span {
+    color: #666;
+    font-size: 13px;
+}	
+
+        /* KEAHLIAN */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skills span {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 10px 18px;
+            border-radius: 20px;
+        }
+
+        /* PROYEK */
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .project {
+            background: #f1f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            border-bottom: 4px solid #2563eb;
+        }
+
+        .project h3 {
+            color: #0f4c81;
+            margin-bottom: 10px;
+        }
+
+        /* KONTAK */
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f4c81;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGASI -->
+<header>
+
+    <h2>MY PORTFOLIO</h2>
+
+    <nav>
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#biodata">Biodata</a>
+        <a href="#pendidikan">Pendidikan</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#project">Proyek</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+
+</header>
+
+<!-- BERANDA -->
+<div class="hero" id="home">
+
+    <div>
+
+        <img src="foto YosJaky.jpeg"
+             alt="Foto Yos Melinda Jaky">
+
+        <h1>Halo, Saya Yos Melinda Jaky</h1>
+
+        <p>Mahasiswa Program Studi Pendidikan Matematika</p>
+
+        <p>PSDKU Universitas Pattimura</p>
+
+        <p>Kabupaten Maluku Barat Daya | Angkatan 2024</p>
+
+        <a href="#about" class="tombol">
+            Tentang Saya
+        </a>
+
+    </div>
+
+</div>
+
+<div class="container">
+
+    <!-- TENTANG SAYA -->
+    <div class="section" id="about">
+
+        <h2>👩‍🎓 Tentang Saya</h2>
+
+        <p>
+            Perkenalkan, nama saya Yos Melinda Jaky.
+            Saya merupakan mahasiswa aktif Program Studi
+            Pendidikan Matematika angkatan 2024 di
+            PSDKU Universitas Pattimura, Kabupaten
+            Maluku Barat Daya.
+        </p>
+
+        <p>
+            Saya memiliki ketertarikan dalam bidang
+            pendidikan, matematika, dan teknologi.
+            Saya senang mempelajari hal-hal baru,
+            mengembangkan kemampuan, serta mencoba
+            berbagai pengalaman yang dapat meningkatkan
+            pengetahuan dan keterampilan saya.
+        </p>
+
+        <p>
+            Saya juga tertarik mempelajari pembuatan
+            website, media pembelajaran matematika,
+            pemrograman.
+        </p>
+
+    </div>
+
+    <!-- BIODATA -->
+    <div class="section biodata" id="biodata">
+
+        <h2>📋 Biodata Pribadi</h2>
+
+        <p><strong>Nama:</strong> Yos Melinda Jaky</p>
+
+        <p><strong>Alamat:</strong>
+        Desa Wakarleli</p>
+
+        <p><strong>Universitas:</strong>
+       Pattimura,Kabupaten Maluku Barat Daya</p>
+
+        <p><strong>Program Studi:</strong>
+        Pendidikan Matematika</p>
+
+        <p><strong>Angkatan:</strong> 2024</p>
+
+        <p><strong>Status:</strong> Mahasiswa</p>
+
+        <p><strong>Email:</strong>
+        melindajaky7@gmail.com</p>
+
+    </div>
+<section class="section" id="pendidikan">
+    <h2>Riwayat Pendidikan</h2>
+    <p class="education-desc">
+        Berikut adalah perjalanan pendidikan saya.
+    </p>
+
+    <div class="education-list">
+
+        <div class="education-item">
+            <div class="education-icon">📚</div>
+            <div class="education-info">
+                <h3>Sekolah Dasar (SD)</h3>
+                <p>SD Negeri Wakarleli</p>
+            </div>
+        </div>
+
+        <div class="education-item">
+            <div class="education-icon">📚</div>
+            <div class="education-info">
+                <h3>Sekolah Menengah Pertama (SMP)</h3>
+                <p>SMP Negeri Tiakur</p>
+            </div>
+        </div>
+
+        <div class="education-item">
+            <div class="education-icon">🏫</div>
+            <div class="education-info">
+                <h3>Sekolah Menengah Atas (SMA)</h3>
+                <p>SMA Negeri 13 Maluku Barat Daya</p>
+            </div>
+        </div>
+
+        <div class="education-item">
+            <div class="education-icon">🎓</div>
+            <div class="education-info">
+                <h3>Perguruan Tinggi</h3>
+                <p>PSDKU Universitas Pattimura,Kabupaten Maluku Barat Daya</p>
+                <span>Program Studi Pendidikan Matematika | Angkatan 2024</span>
+            </div>
+        </div>
+
+    </div>
+</section>    </table>
+</section>
+    </table>
+</section>
+
+    <!-- KEAHLIAN -->
+    <div class="section" id="skills">
+
+        <h2>💻 Keahlian Saya</h2>
+
+        <div class="skills">
+
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Python Dasar</span>
+            <span>Microsoft Word</span>
+            <span>Menyanyi</span>
+            <span>Menari</span>
+            <span>Media Pembelajaran</span>
+		
+	
+		
+        </div>
+
+    </div>
+
+    <!-- PROYEK -->
+    <div class="section" id="project">
+
+        <h2>🚀 Proyek dan Hasil Karya</h2>
+
+        <div class="project-list">
+
+            <div class="project">
+
+                <h3>Website Portofolio</h3>
+
+                <p>
+                    Membuat website portofolio pribadi
+                    menggunakan HTML dan CSS.
+                </p>
+
+            </div>
+
+            <div class="project">
+
+                <h3>Media Pembelajaran Matematika</h3>
+
+                <p>
+                    Membuat website media pembelajaran
+                    untuk membantu siswa memahami materi
+                    matematika.
+                </p>
+
+            </div>
+
+            <div class="project">
+
+                <h3>Ular Tangga Matematika</h3>
+
+                <p>
+                    Membuat permainan edukasi ular tangga
+                    sebagai media pembelajaran matematika
+                    yang menarik dan menyenangkan.
+                </p>
+
+            </div>
+
+            <div class="project">
+
+                <h3>Program Python</h3>
+
+                <p>
+                    Mempelajari dan membuat program
+                    sederhana menggunakan Python.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- KONTAK -->
+    <div class="section contact" id="contact">
+
+        <h2>📩 Hubungi Saya</h2>
+
+        <p>
+            Email:
+            <a href="mailto:melindajaky7@gmail.com">
+                melindajaky7@gmail.com
+            </a>
+        </p>
+
+        <p>
+            Terima kasih telah mengunjungi
+            portofolio pribadi saya.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 Yos Melinda Jaky
+    </p>
+
+    <p>
+        Personal Portfolio |
+        Pendidikan Matematika
+    </p>
+
+</footer>
+
+</body>
+</html>
